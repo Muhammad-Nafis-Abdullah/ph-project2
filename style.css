@@ -1,0 +1,245 @@
+/*==============>[@imported files]<==============*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+
+
+/*____________[End of => @imported files]___________*/
+
+
+/*==============>[utilities]<==============*/
+    :root{
+        --button-bg:rgb(19, 173, 219);
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Nunito';
+    }
+    body{
+        padding-top: 87px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    h1{
+        font-size: 52px;
+        font-weight: 700;
+        line-height: 70px;
+        letter-spacing: 0px;
+    }
+    h4{
+        font-size: 24px;
+        line-height: 36px;
+        color: #3A3A3A;
+        font-weight: 700;
+    }
+    a{
+        text-decoration: none;
+    }
+
+/*____________[End of => utilities]___________*/
+
+/*==============>[header]<==============*/
+    header{
+        display: grid;
+        grid-template-columns: 243px 912px;
+    }
+
+/*__________[End of => header]__________*/
+
+
+/*==============>[main]<==============*/
+    main{
+        margin: 72px 0 100px;
+        /* border: solid; */
+        min-height: 200vh;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+/*__________[End of => main]__________*/
+
+
+/*==============>[starting-journey]<==============*/
+    .starting-journey{
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: 582px 133px 440px;
+        align-items: center;
+        grid-template-areas: 
+            "st . si"
+        ;
+    }
+
+
+    .starting-journey .text-area{
+        grid-area: st;
+        height: 270px;
+    }
+    .text-area p{
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0px;
+        margin: 16px 0;
+    }
+    .text-area a{
+        display: inline-block;
+        padding: 10px 24px;
+        background-color: var(--button-bg);
+        border-radius: 41px;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0px;
+    }
+
+
+    .starting-journey .img-area{
+        grid-area: si;
+        height: 414px;
+    }
+    .starting-journey .img-area > img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+
+/*__________[End of => starting-journey]__________*/
+
+
+/*==============>[popular-collection]<==============*/
+    .popular-collection{
+        max-width: 1047px;
+        min-height: 1662px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+
+
+    .popular-collection> h3{
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 50px;
+        letter-spacing: 0px;
+        text-align: center;
+        color: rgba(58, 58, 58, 1);
+    }
+
+
+    .popular-collection .card-area{
+        display: grid;
+        grid-template-columns: repeat(3,329px);
+        grid-gap: 30px;
+    }
+    .card-area .card{
+        height: 476px;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        border-radius: 5px;
+        padding: 17px 14px;
+    }
+    .card img{
+        height: 256px;
+        width: 300px;
+        border-radius: 5px;
+        margin-bottom: 16px;
+        overflow: hidden;
+    }
+    .card h3{
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 40px;
+        letter-spacing: 0em;
+        color: #18191F;
+        margin-bottom: 6px;
+    }
+    .card .price{
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 0em;
+        rgba(0, 0, 0, 0.87)
+    }
+    .rating .fa-star , .rating .fa-star-half-alt{
+        color: #FB8200;
+        font-size: 10.32px;
+    }
+    .rating>span{
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 22px;
+        letter-spacing: 0.1px;
+        color: rgba(94, 99, 102, 1);
+    }
+    .plus-point p{
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0.018em;
+        color: rgba(120, 120, 133, 1);
+    }
+
+
+    .see-more{
+        align-self: flex-end;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0px;
+        color: var(--button-bg);
+    }
+
+
+/*__________[End of => popular-collection]__________*/
+
+
+
+/*==============>[footer]<==============*/
+    footer{
+        align-self: stretch;
+        Height:239px;
+        background-color: #0A0826;
+        padding: 50px 0;
+        color: white;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer>h4{
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 0px;
+    }
+    footer p{
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0em;
+        color: #D9DBE1;
+    }
+    footer .social-icon{
+        text-decoration: none;
+        width: 176px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .social-icon .fab{
+        color: #D9DBE1;
+        font-size: 30px;
+    }
+
+
+/*__________[End of => footer]__________*/
+
+
