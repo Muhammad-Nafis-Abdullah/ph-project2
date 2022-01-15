@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&display=swap');
 
 
 
@@ -10,7 +11,7 @@
 
 /*==============>[utilities]<==============*/
     :root{
-        --button-bg:rgb(19, 173, 219);
+        --button-bg:rgb(0, 120, 160);
     }
     *{
         margin: 0;
@@ -19,7 +20,7 @@
         font-family: 'Nunito';
     }
     body{
-        padding-top: 87px;
+        padding-top: 50px;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
@@ -29,6 +30,12 @@
         font-weight: 700;
         line-height: 70px;
         letter-spacing: 0px;
+        color: rgba(58, 58, 58, 1);
+        font-family: 'Exo 2';
+    }
+    h2{
+        font-size: 35px;
+        color: rgba(58, 58, 58, 1);
     }
     h4{
         font-size: 24px;
@@ -54,7 +61,6 @@
 /*==============>[main]<==============*/
     main{
         margin: 72px 0 100px;
-        /* border: solid; */
         min-height: 200vh;
         display: flex;
         flex-flow: column nowrap;
@@ -76,12 +82,12 @@
     }
 
 
-    .starting-journey .text-area{
+    .text-area{
         grid-area: st;
         height: 270px;
     }
     .text-area p{
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 600;
         line-height: 24px;
         letter-spacing: 0px;
@@ -97,14 +103,33 @@
         font-weight: 700;
         line-height: 24px;
         letter-spacing: 0px;
+        transition: transform .3s ;
+    }
+    .text-area a:hover{
+        transform: scale(1.2);
+    }
+    .text-area a:hover i {
+        transform: scale(1.2);
+        position: relative;
+        animation: arrow .6s ease-in infinite;
+    }
+    @keyframes arrow {
+        0%{
+            left: 0;
+        }
+        100%{
+            left: 3rem;
+        }
+    }
+    .text-area a:active{
+        transform: scale(1);
     }
 
-
-    .starting-journey .img-area{
+    .img-area{
         grid-area: si;
         height: 414px;
     }
-    .starting-journey .img-area > img{
+    .img-area > img{
         max-width: 100%;
         max-height: 100%;
     }
@@ -134,12 +159,12 @@
     }
 
 
-    .popular-collection .card-area{
+    .card-area{
         display: grid;
         grid-template-columns: repeat(3,329px);
         grid-gap: 30px;
     }
-    .card-area .card{
+    .card{
         height: 476px;
         box-shadow: 0px 4px 4px 0px #00000040;
         border-radius: 5px;
@@ -160,7 +185,7 @@
         color: #18191F;
         margin-bottom: 6px;
     }
-    .card .price{
+    .price{
         font-size: 24px;
         font-weight: 400;
         line-height: 36px;
@@ -195,10 +220,164 @@
         line-height: 24px;
         letter-spacing: 0px;
         color: var(--button-bg);
+        margin-top: 32px;
+        transition: transform .3s;
+    }
+    .see-more:hover{
+        transform: scale(1.2);
+    }
+    .see-more:active{
+        transform: scale(1);
     }
 
 
 /*__________[End of => popular-collection]__________*/
+
+
+/*==============>[creative section]<==============*/
+    .creative-section h2{
+        margin-bottom: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+    .creative-content{
+        display: flex;
+        max-width: 1155px;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-flow: row wrap;
+    }
+    .creative-img{
+        flex: 0 0 300px;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        background-image: url("");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        animation: changing-image 10s steps(100) infinite;
+    }
+    .creative-text{
+        flex: 0 1 855px;
+        width: 855px;
+        padding: 1rem 10%;
+    }
+    .creative-text p{
+        font-size: 1.8em;
+    }
+    .text-hightlight{
+        color: var(--button-bg);
+    }
+
+    /*auto image changing in creative section */
+    @keyframes changing-image {
+        0%{
+            background-image: url("images/action.png");
+            opacity: .2;
+        }
+        5%{
+            background-image: url("images/action.png");
+            opacity: .6;
+        }
+        10%{
+            background-image: url("images/action.png");
+            opacity: 1;
+        }
+        15%{
+            background-image: url("images/action.png");
+            opacity: .6;
+        }
+        19%{
+            background-image: url("images/action.png");
+            opacity: .2;
+        }
+        20%{
+            background-image: url("images/airpod.png");
+            opacity: .2;
+        }
+        25%{
+            background-image: url("images/airpod.png");
+            opacity: .6;
+        }
+        30%{
+            background-image: url("images/airpod.png");
+            opacity: 1;
+        }
+        35%{
+            background-image: url("images/airpod.png");
+            opacity: .6;
+        }
+        39%{
+            background-image: url("images/airpod.png");
+            opacity: .2;
+        }
+        40%{
+            background-image: url("images/camera.png");
+            opacity: .2;
+        }
+        45%{
+            background-image: url("images/camera.png");
+            opacity: .6;
+        }
+        50%{
+            background-image: url("images/camera.png");
+            opacity: 1;
+        }
+        55%{
+            background-image: url("images/camera.png");
+            opacity: .6;
+        }
+        59%{
+            background-image: url("images/camera.png");
+            opacity: .2;
+        }
+        60%{
+            background-image: url("images/drone.png");
+            opacity: .2;
+        }
+        65%{
+            background-image: url("images/drone.png");
+            opacity: .6;
+        }
+        70%{
+            background-image: url("images/drone.png");
+            opacity: 1;
+        }
+        75%{
+            background-image: url("images/drone.png");
+            opacity: .6;
+        }
+        79%{
+            background-image: url("images/drone.png");
+            opacity: .2;
+        }
+        80%{
+            background-image: url("images/gear.png");
+            opacity: .2;
+        }
+        85%{
+            background-image: url("images/gear.png");
+            opacity: .6;
+        }
+        90%{
+            background-image: url("images/gear.png");
+            opacity: 1;
+        }
+        95%{
+            background-image: url("images/gear.png");
+            opacity: .6;
+        }
+        100%{
+            background-image: url("images/gear.png");
+            opacity: .2;
+        }
+    }
+
+
+/*__________[End of => creative section]__________*/
+
+
 
 
 
@@ -228,7 +407,7 @@
         letter-spacing: 0em;
         color: #D9DBE1;
     }
-    footer .social-icon{
+    .social-icon{
         text-decoration: none;
         width: 176px;
         display: flex;
@@ -237,9 +416,106 @@
     .social-icon .fab{
         color: #D9DBE1;
         font-size: 30px;
+        transition: transform .3s;
+    }
+    .social-icon .fab:hover{
+        transform: scale(1.2);
+    }
+    .social-icon .fab:active{
+        transform: scale(1);
     }
 
 
 /*__________[End of => footer]__________*/
 
 
+
+
+
+/*==============>[media query for tablet / notepad]<==============*/
+@media only screen and (max-width: 768px) {
+    body{
+        padding-top: 50px;
+    }
+    header{
+        grid-template-columns: 1fr;
+        align-self: stretch;
+        padding: 0 2rem;
+    }
+    main{
+        margin-top: 1.5rem;
+    }
+    .starting-journey{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "si si si"
+        "st st st"
+        ;
+        justify-content: center;
+        justify-items: center;
+        padding: 0 2rem;
+    }
+    .img-area{
+        max-height: 20rem;
+        margin-bottom: 1rem;
+    }
+    .card-area{
+        grid-template-columns: repeat(2,329px);
+    }
+    .creative-text{
+        margin-top: 2rem;
+        flex: 0 1 100%;
+        width: 100%;
+        padding: 1rem 10%;
+    }
+    .creative-text p{
+        font-size: 1.5em;
+    }
+}
+/*__________[End of => media query for tablet / notepad]__________*/
+
+
+/*==============>[media query for mobile phone]<==============*/
+@media only screen and (max-width: 400px) {
+    body{
+        padding-top: 35px;
+    }
+    header{
+        align-self: center;
+    }
+    main{
+        margin-top: 22px;
+    }
+    h1{
+        font-size: 28px;
+        line-height: 42px;
+    }
+    .starting-journey{
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-bottom: 50.5px;
+    }
+    .text-area{
+        max-width: 400px;
+        padding: 0 10px;
+    }
+    .text-area p{
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .img-area{
+        width: 256px;
+        height: 256px;
+        margin-bottom: 14px;
+    }
+    .popular-collection> h3{
+        font-size: 20px;
+    }
+    .card-area{
+        grid-template-columns: 329px;
+    }
+    .creative-text p{
+        font-size: 1.2em;
+    }
+}
+/*__________[End of => media query for mobile phone]__________*/
