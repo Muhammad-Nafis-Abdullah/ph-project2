@@ -169,7 +169,8 @@
     }
     .card{
         height: 476px;
-        box-shadow: 0px 4px 4px 0px #00000040;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
         border-radius: 5px;
         padding: 17px 14px;
     }
